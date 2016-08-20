@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="delete_mclocation.php" server="webintra.sli/pdmis/" local="131157349496359299" remote="131157097800000000" Dst="0" />
+<file name="delete_sparepart.php" server="webintra.sli/pdmis/" local="131157349496759305" remote="131157097800000000" Dst="0" />
+<file name="delete_workorder.php" server="webintra.sli/pdmis/" local="131157349497084310" remote="131157097800000000" Dst="0" />
+<file name="insert_newmcgroup.php" server="webintra.sli/pdmis/" local="131157369548487251" remote="131157116400000000" Dst="0" />
+<file name="insert_newmclocation.php" server="webintra.sli/pdmis/" local="131157369682507093" remote="131157116400000000" Dst="0" />
+<file name="insert_newmcsubgroup.php" server="webintra.sli/pdmis/" local="131157369764699508" remote="131157116400000000" Dst="0" />
+<file name="insert_sparepart.php" server="webintra.sli/pdmis/" local="131158680396384056" remote="131158426200000000" Dst="0" />
+<file name="insert_workorder.php" server="webintra.sli/pdmis/" local="131157370031488277" remote="131157116400000000" Dst="0" />
+<file name="update_mclocation.php" server="webintra.sli/pdmis/" local="131157807895851467" remote="131157165600000000" Dst="0" />
+<file name="update_sparepart.php" server="webintra.sli/pdmis/" local="131158699081527081" remote="131158445400000000" Dst="0" />
+<file name="update_workorder.php" server="webintra.sli/pdmis/" local="131157807895851467" remote="131157196800000000" Dst="0" />
+</dwsync>
