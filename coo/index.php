@@ -15,32 +15,9 @@ File Name         : index.php
 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>";
 	exit();
 	}
-	
-/*	File Name    : index.php
-    	Project No   : 
-    	Create Date  : 05/08/2016
-	Create by    : Tinnakorn.M
-	Description  : Index of TE Admin
-	psd/File data flow:
-        ---------------------------------------------------------------------------
-        ---------------------------------------------------------------------------        
-	Log:  DD/MM/YYYY : Description, [Card No: ], By 
-            
-            - 17/12/2012 : [Card No:-], Create , By Tinnakorn.M
-	    
-			
-	    (Case backup)
-            - DD/MM/YYYY : Backup, File name : xx.php, By Tinnakorn.M
-	       
-*/
-
-
  if(!$_SESSION['uname']){  echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>"; }
  
-error_reporting(E_ALL);
-
-
-
+ error_reporting(E_ALL);
 
  require('../../include/config.inc.php'); 
  mysql_select_db($db,$connect); 
@@ -53,9 +30,9 @@ error_reporting(E_ALL);
 		}
 		
 //Initial setting
-$dev_v1 = 'OCMX300';
-$plant = '1300';		
-$dev_root = 'ocmx300';
+$dev_v1 = 'PK200';
+$plant = '1200';		
+$dev_root = 'coo';
  
  ?>
 
@@ -89,7 +66,6 @@ $dev_root = 'ocmx300';
     </style>
 	<script type="text/javascript" src="../../include/lib/jquery1.10.2.min.js"> 	</script>
 	<script src="../../include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
-    <!-- 
  <script type="text/javascript" src="../../components/lightbox/facebox.js" ></script>
  <link href="../../components/lightbox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
  <script type="text/javascript">
@@ -100,7 +76,6 @@ $dev_root = 'ocmx300';
       })
     })
     </script>
-    -->
  
  
  <script type="text/javascript">
@@ -116,7 +91,7 @@ $dev_root = 'ocmx300';
             $ul.html( "<li><div class='ui-loader'><span class='ui-icon ui-icon-loading'></span></div></li>" );
             $ul.listview( "refresh" );
             $.ajax({
-                url: "http://lionproduction.sli/pdmis/include/model-teadmin/components/ajax_searchsparepart.php",
+                url: "components/ajax_searchsparepart.php",
                 dataType: "jsonp",
                 crossDomain: true,
                 data: {

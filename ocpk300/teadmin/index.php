@@ -1,30 +1,20 @@
-
-<?php session_start();
+<?php session_start(); ?>
+<?php 
+/******************** MIS STANDARD HEADER ***********************	
+File Name         : index.php
+    Project No    : 
+    Create Date  : 05/08/2016
+	Create by     : MIS Name
+	Log:  DD/MM/YYYY : Description, By Name
+            05/08/2016 : Example description reversion, By MIS Name
+/****************************************************************/
+?>
+<?
  if(!isset($_SESSION["name"])){
 	echo"Session คุณหมดอายุ กรุณาเข้าสู่ระบบอีกครั้ง";
 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>";
 	exit();
 	}
-	
-/*	File Name    : index.php
-    	Project No   : 
-    	Create Date  : 05/08/2016
-	Create by    : Tinnakorn.M
-	Description  : Index of TE Admin
-	psd/File data flow:
-        ---------------------------------------------------------------------------
-        ---------------------------------------------------------------------------        
-	Log:  DD/MM/YYYY : Description, [Card No: ], By 
-            
-            - 17/12/2012 : [Card No:-], Create , By Tinnakorn.M
-	    
-			
-	    (Case backup)
-            - DD/MM/YYYY : Backup, File name : xx.php, By Tinnakorn.M
-	       
-*/
-
-
  if(!$_SESSION['uname']){  echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>"; }
  
 error_reporting(E_ALL);
