@@ -15,7 +15,7 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <title>PDMIS</title>
+    <title>LON PDMIS</title>
 	<link rel="stylesheet"  href="pdmis/include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
 	<style type="text/css">
 	body {
