@@ -1,43 +1,133 @@
 <?php session_start();
-	if(!session_is_registered("login_true")){
-	echo"กรุณาเข้าสู่ระบบ";
-	echo"<meta http-equiv='refresh' content='0; url=sigin.php'>";
-	}
-	require('include/config.inc.php');
-	$login_true = $_SESSION['login_true'];
-	
-	// show display
+// show display
 		if(!empty($_SESSION['display']))
 		{
 			echo '<div id="alert">' . $_SESSION['display'] . '</div>';
 			unset($_SESSION['display']);
 		}
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Mixing plant 200 | ยินดีต้อนรับ</title>
-<link href="style/mainstyle.css" rel="stylesheet" type="text/css" /></head>
-<script type="text/javascript" src="include/lib/jquery.min.js"></script>
-<script type="text/javascript" src="include/lib/lionjqery.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>PDMIS</title>
+	<link rel="stylesheet"  href="pdmis/include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+	<style type="text/css">
+	body {
+	background-color: #FFFFFF;
+}
+    </style>
+	<script src="pdmis/include/lib/jquery1.10.2.min.js"></script>
+	<script src="pdmis/include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ 
+ <script  language="javascript">
+   // mozfullscreenerror event handler
+function errorHandler() {
+   alert('mozfullscreenerror');
+}
+document.documentElement.addEventListener('mozfullscreenerror', errorHandler, false);
+
+// toggle full screen
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+}
+
+// keydown event handler
+/*
+document.addEventListener('keydown', function(e) {
+  if (e.keyCode == 13 || e.keyCode == 70) { // F or Enter key
+    toggleFullScreen();
+  }
+}, false);
+*/
+  
+ </script>
+ 
+ 
+</head>
+
+
 
 <body>
-<?php require('components/header.php'); ?>
-
-
-<div style="background-color:#ACBCFB; text-align:left;"><strong>เมนู</strong>หลัก</div>
-<div style="margin-top:10px; height:520px;">
-  <div align="left">
-   <div class="link_ipad"><a href="hh/">ศูนย์ข้อมูลกลาง HH</a></div>
-   <div class="link_ipad"><a href="mix200/index.php">แผนก mixing </a></div>
-  <div class="link_ipad"><a href="gs/index.php">แผนก gs </a></li>
+ 
+<div data-role="page" id="page1" style="text-align: center; margin: auto;  background-image: url(http://lionproduction.sli/pdmis/source/bg4.jpg); background-size: cover; background-position-x: inherit; background-repeat: no-repeat;" >
+  
+ 
+ <div style="max-width: 500px;  margin: auto; background: rgba(255, 255, 255, 0.44);
+    margin-top: 50px;     
+    -webkit-border-radius: 4px;
+    border-radius: 4px;" class="block"> 
+      
+      <div style="height:30px;">      
+      </div>    
+         <div style="height:30px; text-align:center; padding-top:60px; color:#030;">
+         <h3>
+<span style="color: #485182;">
+       LION<strong>  <em> MIS </em>    PRODUCTION SYSTEM</strong>
+</span>
+       
+       </h3>
+      </div>   
+      <br/>
+    <div data-role="content" style="text-align:center; margin:auto;   height:200px;">
+ 
+ <span style="color:#F00">   
+     *Tips : กด F11 เพื่อแสดงผลแบบเต็มจอ
+     </span>
+        
+        <form action="pdmis/components/singin.php" method="post" data-ajax="false">
+        <table style="margin:auto; text-align:center;">
+       
+           <tr><td>ชื่อผู้ใช้งาน </td><td> <input name="user_login" id="user_login"   placeholder="ชื่อผู้ใช้งานของคุณ" value="" type="text"></td></tr>
+           <tr><td>รหัสผ่าน </td><td><input name="pwd_login" id="pwd_login" placeholder="รหัสผ่านของคุณ"  value="" type="password"></td></tr>
+           <tr><td> </td><td>
+           <div style="text-align:left;">
+           <input type="submit" data-inline="true" data-theme="b" value="เข้าสู่ระบบ" >
+           </div>
+           </td></tr>
+         </table>
+         </form>   
+         
+    
+        
   </div>
-  <div class="link_ipad"><a href="tw/index.php">แผนก Tower1</a></li>
-  </div> 
+    <div style="padding:10px; margin:10px; height:100px;">
+  <a href="http://lionproduction.sli/pdmis/user/index.php?dev=packing200" data-ajax="false">
+    <img src="pdmis/mix200/img/icon_new2.gif" width="40" height="20">เพิ่ม / ตรวสอบ และแก้ไขบัญชีชื่อผู้ใช้งาน </a>
+  <br/>
+  
+   <a href="http://lionweb.lct/php/qaiso/index.html" data-ajax="false" target="iso">
+    <img src="pdmis/mix200/img/icon_new2.gif" width="40" height="20"> [ ISO Doc. ] ระบบเอกสาร ISO</a> 
+  <br/>
+  
+   
+  </div>
+  </div><!--end block div -->
+      
+     
 </div>
-<?php require('components/footer.php'); ?>
+ 
 </body>
-
-
 </html>
