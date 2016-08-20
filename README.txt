@@ -2,5 +2,5 @@ MIS PROJECT LIST
 MIS NAME                     REGIST DATE
 TINNAKORN.M                  20/08/2016
 =========================================
-TEST CHANGE FROM REMOTE
+TEST CHANGE FROM REMOTE BY TINNAKORN.M
 =========================================
