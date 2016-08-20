@@ -1,12 +1,13 @@
-<?php session_start();
-// show display
-		if(!empty($_SESSION['display']))
-		{
-			echo '<div id="alert">' . $_SESSION['display'] . '</div>';
-			unset($_SESSION['display']);
-		}
+<?php 
+/******************** MIS STANDARD HEADER ***********************	
+File Name         : index.php
+    Project No    : 
+    Create Date  : 05/08/2016
+	Create by     : Tinnakorn.M
+	Log:  DD/MM/YYYY : Description, By Name
+            05/08/2016 : New home version, By Tinnakorn.M
+/****************************************************************/
 ?>
- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <title>PDMIS</title>
+    <title>LION PDMIS</title>
 	<link rel="stylesheet"  href="pdmis/include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
 	<style type="text/css">
 	body {
@@ -24,48 +25,6 @@
     </style>
 	<script src="pdmis/include/lib/jquery1.10.2.min.js"></script>
 	<script src="pdmis/include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
- 
- <script  language="javascript">
-   // mozfullscreenerror event handler
-function errorHandler() {
-   alert('mozfullscreenerror');
-}
-document.documentElement.addEventListener('mozfullscreenerror', errorHandler, false);
-
-// toggle full screen
-function toggleFullScreen() {
-  if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.cancelFullScreen) {
-      document.cancelFullScreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitCancelFullScreen) {
-      document.webkitCancelFullScreen();
-    }
-  }
-}
-
-// keydown event handler
-/*
-document.addEventListener('keydown', function(e) {
-  if (e.keyCode == 13 || e.keyCode == 70) { // F or Enter key
-    toggleFullScreen();
-  }
-}, false);
-*/
-  
- </script>
- 
- 
 </head>
 
 
@@ -94,17 +53,17 @@ document.addEventListener('keydown', function(e) {
     <div data-role="content" style="text-align:center; margin:auto;   height:200px;">
  
  <span style="color:#F00">   
-     *Tips : กด F11 เพื่อแสดงผลแบบเต็มจอ
+     *Tips : �� F11 �����ʴ���Ẻ�����
      </span>
         
         <form action="pdmis/components/singin.php" method="post" data-ajax="false">
         <table style="margin:auto; text-align:center;">
        
-           <tr><td>ชื่อผู้ใช้งาน </td><td> <input name="user_login" id="user_login"   placeholder="ชื่อผู้ใช้งานของคุณ" value="" type="text"></td></tr>
-           <tr><td>รหัสผ่าน </td><td><input name="pwd_login" id="pwd_login" placeholder="รหัสผ่านของคุณ"  value="" type="password"></td></tr>
+           <tr><td>���ͼ����ҹ </td><td> <input name="user_login" id="user_login"   placeholder="���ͼ����ҹ�ͧ�س" value="" type="text"></td></tr>
+           <tr><td>���ʼ�ҹ </td><td><input name="pwd_login" id="pwd_login" placeholder="���ʼ�ҹ�ͧ�س"  value="" type="password"></td></tr>
            <tr><td> </td><td>
            <div style="text-align:left;">
-           <input type="submit" data-inline="true" data-theme="b" value="เข้าสู่ระบบ" >
+           <input type="submit" data-inline="true" data-theme="b" value="�������к�" >
            </div>
            </td></tr>
          </table>
@@ -115,18 +74,16 @@ document.addEventListener('keydown', function(e) {
   </div>
     <div style="padding:10px; margin:10px; height:100px;">
   <a href="http://lionproduction.sli/pdmis/user/index.php?dev=packing200" data-ajax="false">
-    <img src="pdmis/mix200/img/icon_new2.gif" width="40" height="20">เพิ่ม / ตรวสอบ และแก้ไขบัญชีชื่อผู้ใช้งาน </a>
+    <img src="pdmis/mix200/img/icon_new2.gif" width="40" height="20">���� / ����ͺ �����䢺ѭ�ժ��ͼ����ҹ </a>
   <br/>
   
    <a href="http://lionweb.lct/php/qaiso/index.html" data-ajax="false" target="iso">
-    <img src="pdmis/mix200/img/icon_new2.gif" width="40" height="20"> [ ISO Doc. ] ระบบเอกสาร ISO</a> 
+    <img src="pdmis/mix200/img/icon_new2.gif" width="40" height="20"> [ ISO Doc. ] �к��͡��� ISO</a> 
   <br/>
   
    
   </div>
   </div><!--end block div -->
-      
-     
 </div>
  
 </body>
