@@ -9,7 +9,7 @@ File Name         : index.php
             05/08/2016 : Example description reversion, By MIS Name
 /****************************************************************/
 ?>
-<?
+<?php
  if(!isset($_SESSION["name"])){
 	echo"Session คุณหมดอายุ กรุณาเข้าสู่ระบบอีกครั้ง";
 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>";
@@ -17,7 +17,10 @@ File Name         : index.php
 	}
  if(!$_SESSION['uname']){  echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>"; }
  
- error_reporting(E_ALL);
+error_reporting(E_ALL);
+
+
+
 
  require('../../include/config.inc.php'); 
  mysql_select_db($db,$connect); 
@@ -66,6 +69,7 @@ $dev_root = 'coo';
     </style>
 	<script type="text/javascript" src="../../include/lib/jquery1.10.2.min.js"> 	</script>
 	<script src="../../include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <!-- 
  <script type="text/javascript" src="../../components/lightbox/facebox.js" ></script>
  <link href="../../components/lightbox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
  <script type="text/javascript">
@@ -76,6 +80,7 @@ $dev_root = 'coo';
       })
     })
     </script>
+    -->
  
  
  <script type="text/javascript">
@@ -91,7 +96,7 @@ $dev_root = 'coo';
             $ul.html( "<li><div class='ui-loader'><span class='ui-icon ui-icon-loading'></span></div></li>" );
             $ul.listview( "refresh" );
             $.ajax({
-                url: "components/ajax_searchsparepart.php",
+                url: "http://lionproduction.sli/pdmis/include/model-teadmin/components/ajax_searchsparepart.php",
                 dataType: "jsonp",
                 crossDomain: true,
                 data: {
@@ -112,6 +117,7 @@ $dev_root = 'coo';
 	</script>   
     
 </head>
+
 
 <body>
 <div data-role="page" id="myPage" data-url="myPage" >
