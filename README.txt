@@ -6,3 +6,4 @@ TEST CHANGE FROM REMOTE BY TINNAKORN.M
 =========================================
 สวัสดีชาวโลก by: AUMMM
 สวัสดีชาวโลกอีกครั้ง by: AUMMM
+สวัสดีชาวไทย by: Tinnakorn.M
