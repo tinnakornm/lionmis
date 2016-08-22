@@ -1,16 +1,18 @@
- <?php 
+<?php 
 /******************** MIS STANDARD HEADER ***********************	
 File Name         : index.php
     Project No    : 
-    Create Date  : 15/10/2015
-	Create by     : Tinnakorn.M
+    Create Date  : 05/08/2016
+	Create by     : MIS Name
 	Log:  DD/MM/YYYY : Description, By Name
-            22/08/2016 : Start project reversion, By Tinnakorn.M
-/****************************************************************/
+   
+		//Last edit : Tinnakorn.M, Add P300 user, 10/15/2015
+		//Add GS,DY User By Warangkana.D 180316
+		// Add Sub Division by 'type' by Tinnakorn.M 30/06/2016
+		// Add HR Division  Tinnakorn.M 05/08/2016
+*/
 ?>
-<?
-    if(!isset($_GET['dev'])){ $dev = 'StaffHH'; }else{ $dev=$_GET['dev']; }
-?>
+<?php    if(!isset($_GET['dev'])){ $dev = 'StaffHH'; }else{ $dev=$_GET['dev']; } ?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -76,7 +78,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
               <option value="?dev=dy" <?php if($dev=='dy'){ echo "selected=\"selected\""; } ?>>dy</option>
               <option value="?dev=qa" <?php if($dev=='qa'){ echo "selected=\"selected\""; } ?>>qa</option>
               <option value="?dev=gs" <?php if($dev=='gs'){ echo "selected=\"selected\""; } ?>>gs</option>   
-             
+              <option value="?dev=hr" <?php if($dev=='hr'){ echo "selected=\"selected\""; } ?>>hr</option>
 			  <option value="?dev=mix200" <?php if($dev=='mix200'){ echo "selected=\"selected\""; } ?>>mix200</option>
               <option value="?dev=packing100" <?php if($dev=='packing100'){ echo "selected=\"selected\""; } ?>>packing100</option>
 			  <option value="?dev=packing200" <?php if($dev=='packing200'){ echo "selected=\"selected\""; } ?>>packing200</option>
@@ -85,8 +87,9 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
               <option value="?dev=bcmx300" <?php if($dev=='bcmx300'){ echo "selected=\"selected\""; } ?>>bcmx300</option>
               <option value="?dev=ocmx300" <?php if($dev=='ocmx300'){ echo "selected=\"selected\""; } ?>>ocmx300</option>
               <option value="?dev=ocmx300-2" <?php if($dev=='ocmx300-2'){ echo "selected=\"selected\""; } ?>>ocmx300/2</option>
-			   <option value="?dev=tb300" <?php if($dev=='tb300'){ echo "selected=\"selected\""; } ?>>tb300</option>
+			   <option value="?dev=tppk" <?php if($dev=='tppk'){ echo "selected=\"selected\""; } ?>>tppk</option>
               <option value="?dev=mt" <?php if($dev=='mt'){ echo "selected=\"selected\""; } ?>>Maintenance</option>
+             
             </select>
         </form>		</td>
 	    <td valign="top">
