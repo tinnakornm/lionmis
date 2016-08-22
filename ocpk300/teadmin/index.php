@@ -9,7 +9,7 @@ File Name         : index.php
             05/08/2016 : Example description reversion, By MIS Name
 /****************************************************************/
 ?>
-<?
+<?php
  if(!isset($_SESSION["name"])){
 	echo"Session คุณหมดอายุ กรุณาเข้าสู่ระบบอีกครั้ง";
 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>";
@@ -69,19 +69,6 @@ $dev_root = 'ocpk300';
     </style>
 	<script type="text/javascript" src="../../include/lib/jquery1.10.2.min.js"> 	</script>
 	<script src="../../include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
-    <!-- 
- <script type="text/javascript" src="../../components/lightbox/facebox.js" ></script>
- <link href="../../components/lightbox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
- <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $('a[rel*=facebox]').facebox({
-        loadingImage : '../../components/lightbox/loading.gif',
-        closeImage   : '../../components/lightbox/closelabel.png'
-      })
-    })
-    </script>
-    -->
- 
  
  <script type="text/javascript">
 	$( document ).on( "pageinit", "#myPage", function() {
@@ -117,6 +104,7 @@ $dev_root = 'ocpk300';
 	</script>   
     
 </head>
+
 
 <body>
 <div data-role="page" id="myPage" data-url="myPage" >
