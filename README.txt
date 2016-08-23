@@ -10,3 +10,4 @@ TEST CHANGE FROM REMOTE BY TINNAKORN.M
 สวัสดีชาวโลกอีกครั้ง by: AUMMM
 สวัสดีชาว AEC By Peerayu.R
 สวัสดีชาวเพโคปอง By Warangkana.D
+ทดสอบ gi5 by Tinnakorn.M
