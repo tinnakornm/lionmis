@@ -1,32 +1,37 @@
-<?php  session_start(); ?>
+<?php session_start(); ?>
 <?php 
 /******************** MIS STANDARD HEADER ***********************	
 File Name         : index.php
     Project No    : 
-    Create Date  : 22/08/2016
+    Create Date  : 05/08/2016
 	Create by     : MIS Name
 	Log:  DD/MM/YYYY : Description, By Name
-            22/08/2016 : Example description reversion, By MIS Name
+            05/08/2016 : Example description reversion, By MIS Name
 /****************************************************************/
 ?>
-<?
+<?php
  if(!isset($_SESSION["name"])){
 	echo"Session คุณหมดอายุ กรุณาเข้าสู่ระบบอีกครั้ง";
 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>";
 	exit();
 	}
  if(!$_SESSION['uname']){  echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>"; }
+ 
 error_reporting(E_ALL);
+ 
  require('../../include/config.inc.php'); 
-
  mysql_select_db($db,$connect); 
-
-
+ 	
 //menu get
-		if(!isset($_GET['f'])){
-			$f=0;
+		if(!isset($_GET['m'])){
+			$m='mtmachine';
 		}else{
-			$f=$_GET['f'];
+			if($_GET['m']=='0')
+			{
+			$m='mtmachine';
+			}else{
+			$m=$_GET['m'];	
+			}
 		}
 		
 //Initial setting
@@ -66,17 +71,6 @@ $dev_root = 'dk';
     </style>
 	<script type="text/javascript" src="../../include/lib/jquery1.10.2.min.js"> 	</script>
 	<script src="../../include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
- <script type="text/javascript" src="../../components/lightbox/facebox.js" ></script>
- <link href="../../components/lightbox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
- <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $('a[rel*=facebox]').facebox({
-        loadingImage : '../../components/lightbox/loading.gif',
-        closeImage   : '../../components/lightbox/closelabel.png'
-      })
-    })
-    </script>
- 
  
  <script type="text/javascript">
 	$( document ).on( "pageinit", "#myPage", function() {
@@ -91,7 +85,7 @@ $dev_root = 'dk';
             $ul.html( "<li><div class='ui-loader'><span class='ui-icon ui-icon-loading'></span></div></li>" );
             $ul.listview( "refresh" );
             $.ajax({
-                url: "components/ajax_searchsparepart.php",
+                url: "http://lionproduction.sli/pdmis/include/model-teadmin/components/ajax_searchsparepart.php",
                 dataType: "jsonp",
                 crossDomain: true,
                 data: {
@@ -113,19 +107,19 @@ $dev_root = 'dk';
     
 </head>
 
+
 <body>
 <div data-role="page" id="myPage" data-url="myPage" >
    <!-- panel -->
-       <?php  require('../../include/model-teadmin/components/menu.php'); ?>
+       <?php  require('components/menu.php'); ?>
     <!-- header -->
 
-    <?php require('../../include/model-teadmin/components/header.php'); ?>
+    <?php require('components/header.php'); ?>
    <?php 
 		//Module requirement 
-		//if($f==0){  require('components/page/index.php'); }
-		 if($f==0){ require('../../include/model-teadmin/components/page/module_machine.php'); }  
-		elseif($f==1){ require('../../include/model-teadmin/components/page/module_sparepart.php'); }
-		elseif($f==2){ require('../../include/model-teadmin/components/page/module_workorder.php'); }
+		 if($m=='mtmachine'){ require('../../include/model-teadmin/components/page/module_machine.php'); }  
+		elseif($m=='mtsparepart'){ require('../../include/model-teadmin/components/page/module_sparepart.php'); }
+		elseif($m=='mtworkorder'){ require('../../include/model-teadmin/components/page/module_workorder.php'); }
 		 
 		
 	?>

@@ -18,24 +18,26 @@ File Name         : index.php
  if(!$_SESSION['uname']){  echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli'>"; }
  
 error_reporting(E_ALL);
-
-
-
-
+ 
  require('../../include/config.inc.php'); 
  mysql_select_db($db,$connect); 
  	
 //menu get
-		if(!isset($_GET['f'])){
-			$f=0;
+		if(!isset($_GET['m'])){
+			$m='mtmachine';
 		}else{
-			$f=$_GET['f'];
+			if($_GET['m']=='0')
+			{
+			$m='mtmachine';
+			}else{
+			$m=$_GET['m'];	
+			}
 		}
 		
 //Initial setting
 $dev_v1 = 'OCMX300';
 $plant = '1300';		
-$dev_root = 'ocmx300';
+$dev_root = 'ocmx';
  
  ?>
 
@@ -69,8 +71,8 @@ $dev_root = 'ocmx300';
     </style>
 	<script type="text/javascript" src="../../include/lib/jquery1.10.2.min.js"> 	</script>
 	<script src="../../include/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
-
-  <script type="text/javascript">
+ 
+ <script type="text/javascript">
 	$( document ).on( "pageinit", "#myPage", function() {
 	 
     $( "#autocomplete" ).on( "filterablebeforefilter", function ( e, data ) {
@@ -109,16 +111,15 @@ $dev_root = 'ocmx300';
 <body>
 <div data-role="page" id="myPage" data-url="myPage" >
    <!-- panel -->
-       <?php  require('../../include/model-teadmin/components/menu.php'); ?>
+       <?php  require('components/menu.php'); ?>
     <!-- header -->
 
-    <?php require('../../include/model-teadmin/components/header.php'); ?>
+    <?php require('components/header.php'); ?>
    <?php 
 		//Module requirement 
-		//if($f==0){  require('components/page/index.php'); }
-		 if($f==0){ require('../../include/model-teadmin/components/page/module_machine.php'); }  
-		elseif($f==1){ require('../../include/model-teadmin/components/page/module_sparepart.php'); }
-		elseif($f==2){ require('../../include/model-teadmin/components/page/module_workorder.php'); }
+		 if($m=='mtmachine'){ require('../../include/model-teadmin/components/page/module_machine.php'); }  
+		elseif($m=='mtsparepart'){ require('../../include/model-teadmin/components/page/module_sparepart.php'); }
+		elseif($m=='mtworkorder'){ require('../../include/model-teadmin/components/page/module_workorder.php'); }
 		 
 		
 	?>

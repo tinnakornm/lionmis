@@ -35,9 +35,9 @@ error_reporting(E_ALL);
 		}
 		
 //Initial setting
-$dev_v1 = 'DY100';
-$plant = '1100';		
-$dev_root = 'dy';
+$dev_v1 = 'TB300';
+$plant = '1300';		
+$dev_root = 'tb300';
  
  ?>
 
