@@ -1,3 +1,9 @@
+==============================================
+                 ป ร ะ ก า ศ
+==============================================
+24/08/2016 เริ่มใช้ระบบ Fragment Module (f=fragment_module) สำหรับการ control module โดย Programmer สามารถตรวจสอบ fragment module ได้ที่ mapdrive/SS4_MIS/PDMISLib/01-ProjectControl/[use]01-01-ProjectControl-01.xls
+10/08/2016 กำหนดให้ทุกโครงการเริ่มใช้งาน standard structure (MCV Structure) โดย Programmer สามารถดูโมเดลตัวอย่างได้ที่ Module MT Admin @root pdmis/include/model-teadmin/
+==============================================
 MIS PROJECT LIST
 MIS NAME                     REGIST DATE
 TINNAKORN.M                  20/08/2016
