@@ -31,10 +31,11 @@
         <td><!-- process -->
           
           <select name="showtype" id="showtype" style="width:100%;" data-role="none" disabled="disabled" >
-		  <option value="SPECIAL" <?php if($mn==1){ echo 'selected="selected"'; $sprg_type='SPECIAL'; } ?>>SPECIAL ใช้เฉพาะเครื่องจักร </option>
-		  <option value="GENERAL" <?php if($mn==2){ echo 'selected="selected"'; $sprg_type='GENERAL';  } ?>>GENERAL ใช้ทั่วไป</option>
+		  <option value="SPECIAL" <?php if($c==1){ echo 'selected="selected"'; $sprg_type='SPECIAL'; } ?>>SPECIAL ใช้เฉพาะเครื่องจักร </option>
+		  <option value="GENERAL" <?php if($c==2){ echo 'selected="selected"'; $sprg_type='GENERAL';  } ?>>GENERAL ใช้ทั่วไป</option>
+		  <option value="NORMAL" <?php if($c==3){ echo 'selected="selected"'; $sprg_type='NORMAL';  } ?>>อื่นๆ</option>
           </select>
-          <input name="spr_type" type="hidden" value="<?php if($mn==1){ echo 'SPECIAL'; }else{ echo 'GENERAL'; } ?>" />
+          <input name="spr_type" type="hidden" value="<?php if($c==1){ echo 'SPECIAL'; }else if ($c==2){ echo 'GENERAL'; }else{echo 'NORMAL';} ?>" />
            <input type="hidden" name="dev_root" id="dev_root" value="<?php echo $dev_root; ?>" />
            <input type="hidden" name="dev_v1" id="dev_v1" value="<?php echo $dev_v1; ?>" />
           </td>
@@ -44,13 +45,14 @@
         <tr id="line_special" ><td ><!-- batch_size --><div style="text-align:right;  padding-right:5px;"> <label for="process">กลุ่มเครื่องจักร :<span style="color:red;">*</span></label> </div> </td>
         	<td><select name="sprg_name" id="sprg_name" style="width:100%;" data-role="none">
 			  <?php 
-		 if($mn==1){	  
+		 if($c==1){	  
 		  $qg = mysql_query("SELECT * FROM `tpm_sprgrp` WHERE  `dev_v1` LIKE  '$dev_v1' AND `sprg_type` LIKE  'SPECIAL' ORDER BY  `tpm_sprgrp`.`sprg_name` ASC  LIMIT 0 , 30"); 
-		 }else{
+		 }else if($c==2){
 		  $qg = mysql_query("SELECT * FROM `tpm_sprgrp` WHERE  `sprg_type` LIKE  'GENERAL' ORDER BY  `tpm_sprgrp`.`sprg_name` ASC  LIMIT 0 , 30"); 	 
-		 }
-		  
-		   while($arrg =mysql_fetch_array($qg)){
+		 }else{
+                   $qg = mysql_query("SELECT * FROM `tpm_sprgrp` WHERE  `dev_v1` LIKE  '$dev_v1' AND `sprg_type` LIKE  'NORMAL' ORDER BY  `tpm_sprgrp`.`sprg_name` ASC  LIMIT 0 , 30");    
+                 }
+                  while($arrg =mysql_fetch_array($qg)){
 		  ?>
             <option value="<?php echo $arrg['sprg_name']; ?>" <?php if($gr==$arrg['sprg_name']){ echo 'selected="selected"'; } ?>><?php  if($arrg['sub_gr']!=""){ echo $arrg['sub_gr'].'->'; } echo $arrg['sprg_name']; ?></option>
 		 <?php }//end while ?>

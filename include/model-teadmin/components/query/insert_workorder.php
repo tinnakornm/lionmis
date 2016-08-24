@@ -122,7 +122,7 @@
 				 
 
 			if(mysql_query($q)){
-			  	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?f=2&mn=1&D=ALL&MM=$MM&YYYY=$YYYY'>";
+			  	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?m=mtworkorder&c=1&D=ALL&MM=$MM&YYYY=$YYYY'>";
 			}
 		   
 	   }

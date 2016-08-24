@@ -106,7 +106,7 @@
 		
 	}//end post newsprt
 	
-	    echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?f=2&D=ALL&MM=".$arr['MM']."&YYYY=".$arr['YYYY']."'>";
+	    echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?m=mtworkorder&D=ALL&MM=".$arr['MM']."&YYYY=".$arr['YYYY']."'>";
 
  ?>
  

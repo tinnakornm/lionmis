@@ -14,7 +14,7 @@
             $q = "DELETE FROM `lionproduction`.`tpm_jobreq` WHERE `tpm_jobreq`.`JRID` LIKE '$JRID' LIMIT 1";
 				  
 			if(mysql_query($q)){
-				//echo"<meta http-equiv='refresh' content='0; url=../../?f=2&mn=1'>";
+				//echo"<meta http-equiv='refresh' content='0; url=../../?m=2&c=1'>";
 				echo '1';
 			}
 		   

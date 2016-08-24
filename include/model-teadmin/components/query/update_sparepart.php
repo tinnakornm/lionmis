@@ -41,7 +41,7 @@
 		$spr_stock_loc = $_POST['spr_stock_loc'];
 		$spr_details = '';
 		$filename = $arr['spr_img'];
-		//if($arr['spr_type']=='SPECIAL'){ $mn=1; }else{ $mn=2; }
+		//if($arr['spr_type']=='SPECIAL'){ $d=1; }else{ $d=2; }
 		
 	   
 		if(isset($_FILES["img"]["name"]) and $_FILES["img"]["name"] !="" and $_FILES["img"]["tmp_name"] !=""){ //case replace image
@@ -92,7 +92,7 @@ WHERE  `tpm_sparepart`.`spr_id` =".$_POST['spr_id']."");
 		
 	}//end post newsprt
 	
-	   echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?f=1&mn=".$_POST['mn']."&gr=$sprg_name'>";
+	   echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?m=mtsparepart&c=".$_POST['c']."&gr=$sprg_name'>";
 
  ?>
  

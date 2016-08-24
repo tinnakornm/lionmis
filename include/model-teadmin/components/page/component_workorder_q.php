@@ -1,4 +1,14 @@
 <?php
+    /******************** MIS STANDARD HEADER ***********************	
+File Name        : component_workorder_q.php
+    Project No   : 
+    Create Date  : 05/08/2016
+	Create by     : Tinnakorn.M
+	Log:  DD/MM/YYYY : Description, By Name
+            05/08/2016 : Component Template : workorder, By Tinnakorn.M
+/****************************************************************/
+?>
+<?php
     !isset($_GET['JID']) ? $JID='null'   : $JID=$_GET['JID']   ;
 	if(!isset($_GET['V'])){
 	$V = 2;
@@ -57,72 +67,72 @@
        <strong>Fillter </strong>
        หน่วยงาน 
          	   <select name="D" onchange="MM_jumpMenu('parent',this,0)" data-role="none">
-                  <option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($dev==$dev_v1){ echo"selected=\"selected\""; }?>><?php echo $dev_v1; ?></option>
+                  <option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($dev==$dev_v1){ echo"selected=\"selected\""; }?>><?php echo $dev_v1; ?></option>
                </select>
        
 	   DD 
 	   <select name="D" onchange="MM_jumpMenu('parent',this,0)" data-role="none">
 	   
-<option value="?f=2&amp;D=ALL&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='ALL'){ echo"selected=\"selected\""; }?>>ALL</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=ALL&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='ALL'){ echo"selected=\"selected\""; }?>>ALL</option>
 	 
-<option value="?f=2&amp;D=01&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='01'){ echo"selected=\"selected\""; }?>>01</option>
-<option value="?f=2&amp;D=02&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='02'){ echo"selected=\"selected\""; }?>>02</option>
-<option value="?f=2&amp;D=03&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='03'){ echo"selected=\"selected\""; }?>>03</option>
-<option value="?f=2&amp;D=04&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='04'){ echo"selected=\"selected\""; }?>>04</option>
-<option value="?f=2&amp;D=05&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='05'){ echo"selected=\"selected\""; }?>>05</option>
-<option value="?f=2&amp;D=06&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='06'){ echo"selected=\"selected\""; }?>>06</option>	   
-<option value="?f=2&amp;D=07&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='07'){ echo"selected=\"selected\""; }?>>07</option>
-<option value="?f=2&amp;D=08&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='08'){ echo"selected=\"selected\""; }?>>08</option>
-<option value="?f=2&amp;D=09&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='09'){ echo"selected=\"selected\""; }?>>09</option>	
-<option value="?f=2&amp;D=10&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='10'){ echo"selected=\"selected\""; }?>>10</option>	
-<option value="?f=2&amp;D=11&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='11'){ echo"selected=\"selected\""; }?>>11</option>	
-<option value="?f=2&amp;D=12&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='12'){ echo"selected=\"selected\""; }?>>12</option>	
-<option value="?f=2&amp;D=13&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='13'){ echo"selected=\"selected\""; }?>>13</option>	
-<option value="?f=2&amp;D=14&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='14'){ echo"selected=\"selected\""; }?>>14</option>	
-<option value="?f=2&amp;D=15&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='15'){ echo"selected=\"selected\""; }?>>15</option>	
-<option value="?f=2&amp;D=16&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='16'){ echo"selected=\"selected\""; }?>>16</option>	
-<option value="?f=2&amp;D=17&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='17'){ echo"selected=\"selected\""; }?>>17</option>	
-<option value="?f=2&amp;D=18&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='18'){ echo"selected=\"selected\""; }?>>18</option>	
-<option value="?f=2&amp;D=19&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='19'){ echo"selected=\"selected\""; }?>>19</option>	
-<option value="?f=2&amp;D=20&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='20'){ echo"selected=\"selected\""; }?>>20</option>	
-<option value="?f=2&amp;D=21&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='21'){ echo"selected=\"selected\""; }?>>21</option>	
-<option value="?f=2&amp;D=22&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='22'){ echo"selected=\"selected\""; }?>>22</option>	
-<option value="?f=2&amp;D=23&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='23'){ echo"selected=\"selected\""; }?>>23</option>	
-<option value="?f=2&amp;D=24&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='24'){ echo"selected=\"selected\""; }?>>24</option>	
-<option value="?f=2&amp;D=25&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='25'){ echo"selected=\"selected\""; }?>>25</option>	
-<option value="?f=2&amp;D=26&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='26'){ echo"selected=\"selected\""; }?>>26</option>	
-<option value="?f=2&amp;D=27&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='27'){ echo"selected=\"selected\""; }?>>27</option>	
-<option value="?f=2&amp;D=28&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='28'){ echo"selected=\"selected\""; }?>>28</option>	
-<option value="?f=2&amp;D=29&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='29'){ echo"selected=\"selected\""; }?>>29</option>	
-<option value="?f=2&amp;D=30&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='30'){ echo"selected=\"selected\""; }?>>30</option>	
-<option value="?f=2&amp;D=31&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='31'){ echo"selected=\"selected\""; }?>>31</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=01&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='01'){ echo"selected=\"selected\""; }?>>01</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=02&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='02'){ echo"selected=\"selected\""; }?>>02</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=03&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='03'){ echo"selected=\"selected\""; }?>>03</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=04&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='04'){ echo"selected=\"selected\""; }?>>04</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=05&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='05'){ echo"selected=\"selected\""; }?>>05</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=06&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='06'){ echo"selected=\"selected\""; }?>>06</option>	   
+<option value="?m=<?php echo $modulename; ?>&amp;D=07&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='07'){ echo"selected=\"selected\""; }?>>07</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=08&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='08'){ echo"selected=\"selected\""; }?>>08</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=09&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='09'){ echo"selected=\"selected\""; }?>>09</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=10&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='10'){ echo"selected=\"selected\""; }?>>10</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=11&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='11'){ echo"selected=\"selected\""; }?>>11</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=12&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='12'){ echo"selected=\"selected\""; }?>>12</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=13&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='13'){ echo"selected=\"selected\""; }?>>13</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=14&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='14'){ echo"selected=\"selected\""; }?>>14</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=15&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='15'){ echo"selected=\"selected\""; }?>>15</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=16&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='16'){ echo"selected=\"selected\""; }?>>16</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=17&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='17'){ echo"selected=\"selected\""; }?>>17</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=18&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='18'){ echo"selected=\"selected\""; }?>>18</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=19&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='19'){ echo"selected=\"selected\""; }?>>19</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=20&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='20'){ echo"selected=\"selected\""; }?>>20</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=21&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='21'){ echo"selected=\"selected\""; }?>>21</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=22&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='22'){ echo"selected=\"selected\""; }?>>22</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=23&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='23'){ echo"selected=\"selected\""; }?>>23</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=24&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='24'){ echo"selected=\"selected\""; }?>>24</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=25&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='25'){ echo"selected=\"selected\""; }?>>25</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=26&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='26'){ echo"selected=\"selected\""; }?>>26</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=27&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='27'){ echo"selected=\"selected\""; }?>>27</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=28&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='28'){ echo"selected=\"selected\""; }?>>28</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=29&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='29'){ echo"selected=\"selected\""; }?>>29</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=30&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='30'){ echo"selected=\"selected\""; }?>>30</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=31&amp;MM=<?php echo $MM; ?>&amp;YYYY=<?php echo $YYYY; ?>" <?php if($D=='31'){ echo"selected=\"selected\""; }?>>31</option>	
         </select>
 	   (MM)
        <select name="MM" onchange="MM_jumpMenu('parent',this,0)"  data-role="none">
 	 
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=01&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='01'){ echo"selected=\"selected\""; }?>>01</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=02&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='02'){ echo"selected=\"selected\""; }?>>02</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=03&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='03'){ echo"selected=\"selected\""; }?>>03</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=04&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='04'){ echo"selected=\"selected\""; }?>>04</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=05&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='05'){ echo"selected=\"selected\""; }?>>05</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=06&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='06'){ echo"selected=\"selected\""; }?>>06</option>	   
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=07&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='07'){ echo"selected=\"selected\""; }?>>07</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=08&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='08'){ echo"selected=\"selected\""; }?>>08</option>
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=09&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='09'){ echo"selected=\"selected\""; }?>>09</option>	
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=10&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='10'){ echo"selected=\"selected\""; }?>>10</option>	
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=11&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='11'){ echo"selected=\"selected\""; }?>>11</option>	
-<option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=12&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='12'){ echo"selected=\"selected\""; }?>>12</option>			   
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=01&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='01'){ echo"selected=\"selected\""; }?>>01</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=02&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='02'){ echo"selected=\"selected\""; }?>>02</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=03&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='03'){ echo"selected=\"selected\""; }?>>03</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=04&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='04'){ echo"selected=\"selected\""; }?>>04</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=05&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='05'){ echo"selected=\"selected\""; }?>>05</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=06&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='06'){ echo"selected=\"selected\""; }?>>06</option>	   
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=07&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='07'){ echo"selected=\"selected\""; }?>>07</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=08&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='08'){ echo"selected=\"selected\""; }?>>08</option>
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=09&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='09'){ echo"selected=\"selected\""; }?>>09</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=10&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='10'){ echo"selected=\"selected\""; }?>>10</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=11&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='11'){ echo"selected=\"selected\""; }?>>11</option>	
+<option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=12&amp;YYYY=<?php echo $YYYY; ?>" <?php if($MM=='12'){ echo"selected=\"selected\""; }?>>12</option>			   
         </select>
        /(YYYY)
             <select name="YYYY" onchange="MM_jumpMenu('parent',this,0)"  data-role="none">
-              <option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2016" <?php if($YYYY=='2016'){ echo"selected=\"selected\""; }?>>2016</option>
-              <option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2017" <?php if($YYYY=='2017'){ echo"selected=\"selected\""; }?>>2017</option>
-              <option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2018" <?php if($YYYY=='2018'){ echo"selected=\"selected\""; }?>>2018</option>
-              <option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2019" <?php if($YYYY=='2019'){ echo"selected=\"selected\""; }?>>2019</option>
-              <option value="?f=2&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2020" <?php if($YYYY=='2020'){ echo"selected=\"selected\""; }?>>2020</option>
+              <option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2016" <?php if($YYYY=='2016'){ echo"selected=\"selected\""; }?>>2016</option>
+              <option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2017" <?php if($YYYY=='2017'){ echo"selected=\"selected\""; }?>>2017</option>
+              <option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2018" <?php if($YYYY=='2018'){ echo"selected=\"selected\""; }?>>2018</option>
+              <option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2019" <?php if($YYYY=='2019'){ echo"selected=\"selected\""; }?>>2019</option>
+              <option value="?m=<?php echo $modulename; ?>&amp;D=<?php echo $D; ?>&amp;MM=<?php echo $MM; ?>&amp;YYYY=2020" <?php if($YYYY=='2020'){ echo"selected=\"selected\""; }?>>2020</option>
             </select>
 		
-			  Date Control [  <a data-ajax="false" href="?f=2&D=<?php echo $YD; ?>&MM=<?php echo $MM; ?>&YYYY=<?php echo $YYYY; ?>" title="ย้อนกลับ"> <img src="../../source/icons/control-180.png" width="16" height="16" style="vertical-align:middle;" /></a> ] [  <a data-ajax="false" href="?f=2" title="กลับมายังวันปัจุบัน"> <img src="../../source/icons/control-pause.png" width="16" height="16" style="vertical-align:middle;"/></a> ] [  <a data-ajax="false" href="?f=2&D=<?php echo $D+1; ?>&MM=<?php echo $MM; ?>&YYYY=<?php echo $YYYY; ?>" title="วันถัดไป"> <img src="../../source/icons/control.png" width="16" height="16" style="vertical-align:middle;" /></a>] 
+			  Date Control [  <a data-ajax="false" href="?m=<?php echo $modulename; ?>&D=<?php echo $YD; ?>&MM=<?php echo $MM; ?>&YYYY=<?php echo $YYYY; ?>" title="ย้อนกลับ"> <img src="../../source/icons/control-180.png" width="16" height="16" style="vertical-align:middle;" /></a> ] [  <a data-ajax="false" href="?m=<?php echo $modulename; ?>" title="กลับมายังวันปัจุบัน"> <img src="../../source/icons/control-pause.png" width="16" height="16" style="vertical-align:middle;"/></a> ] [  <a data-ajax="false" href="?m=<?php echo $modulename; ?>&D=<?php echo $D+1; ?>&MM=<?php echo $MM; ?>&YYYY=<?php echo $YYYY; ?>" title="วันถัดไป"> <img src="../../source/icons/control.png" width="16" height="16" style="vertical-align:middle;" /></a>] 
       </form> 
 	</div>
 <!-- tbl sparepart -->

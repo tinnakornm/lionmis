@@ -73,7 +73,7 @@ NULL ,
  
 	}//end post newsprt
 	
-  	 echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/index.php?f=0&mn=1'>";
+  	 echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/index.php?m=mtmachine&c=1'>";
 
  ?>
  

@@ -36,7 +36,7 @@ $(document).ready(function()
 	 if (confirm("คุณต้องการลบข้อมูลนี้ใช่หรือไม่ ?")) {	
 	 var spr_id = $(this).attr("id");
 	 var sprg_name = $("#sprg_name").val();
-	 var mn = $("#mn").val();
+	 var c = $("#c").val();
 	 var dev_root = $("#dev_root").val();
 	 var dataString = 'spr_id='+spr_id+'&flag=256';
 	 
@@ -45,7 +45,7 @@ $(document).ready(function()
 			success: function(html)
 			{    
 				 if(html==1){
-					 window.location.href = 'http://lionproduction.sli/pdmis/'+dev_root+'/teadmin/?f=1&mn='+mn+'&gr='+sprg_name;
+					 window.location.href = 'http://lionproduction.sli/pdmis/'+dev_root+'/teadmin/?m=sparepart&c='+c+'&gr='+sprg_name;
 				 }else{ 
 				 	 alert("ไม่สามารถลบ Sparepart นี้ได้ "+html);
 				 } 

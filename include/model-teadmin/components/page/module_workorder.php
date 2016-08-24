@@ -1,4 +1,19 @@
- 
+ <?php 
+    /******************** MIS STANDARD HEADER ***********************	
+File Name         : module_workorder.php
+    Project No    : 
+    Create Date  : 05/08/2016
+	Create by     : Tinnakorn.M
+	Log:  DD/MM/YYYY : Description, By Name
+            05/08/2016 : Module Template : mtworkorder, By Tinnakorn.M
+/****************************************************************/
+	//initial setting 
+	 $modulename = 'mtworkorder';
+     $plant=$_SESSION["plant"];
+	 //Switch your component here
+	if(!isset($_GET['c'])){ $c=1; }else{ $c=$_GET['c']; }
+
+?> 
 <style type="text/css">
  
 #tlb td, #tlb td th {
@@ -14,9 +29,9 @@ font-size:13px;
 
 </style>
 <?php
-	
-    if(!isset($_GET['mn'])){ $mn=1; }else{ $mn=$_GET['mn']; }
-	if($mn==1){
+	//Switch your component here
+	if(!isset($_GET['c'])){ $c=1; }else{ $c=$_GET['c']; }
+	if($c==1){
 		if(!isset($_GET['gr'])){ $gr = 'CASE_PACKER'; }else{ $gr = $_GET['gr']; }	
 		$sprg_type = 'SPECIAL';
 	}else{
@@ -68,9 +83,9 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <table  border="0" cellpadding="0" style=" width: 100%;">
  <tr>
 
- <td style="margin:1px;" width="12%" ><a  style="width:90%;"  data-ajax="false"  href="?f=2&amp;mn=1"  class="ui-btn ui-btn-inline <?php if($mn==1){ echo 'ui-link ui-btn ui-btn-active'; } ?> " > ใบแจ้งซ่อม </a></td>
-  <td  style="margin:1px;"  width="12%"><a  data-ajax="false" style="width:90%;"  href="?f=2&amp;mn=2"  class="ui-btn ui-btn-inline <?php if($mn==2){ echo 'ui-link ui-btn ui-btn-active'; } ?> " > คิวงานซ่อม  </a></td>
-  <td style="margin:1px;" width="12%" ><a data-ajax="false" style="width:90%;"  href="#"  class="ui-btn ui-btn-inline <?php if($mn==3){ echo 'ui-link ui-btn ui-btn-active'; } ?> " >  อื่นๆ   </a></td>
+ <td style="margin:1px;" width="12%" ><a  style="width:90%;"  data-ajax="false"  href="?m=<?php echo $modulename; ?>&amp;c=1"  class="ui-btn ui-btn-inline <?php if($c==1){ echo 'ui-link ui-btn ui-btn-active'; } ?> " > ใบแจ้งซ่อม </a></td>
+  <td  style="margin:1px;"  width="12%"><a  data-ajax="false" style="width:90%;"  href="?m=<?php echo $modulename; ?>&amp;c=2"  class="ui-btn ui-btn-inline <?php if($c==2){ echo 'ui-link ui-btn ui-btn-active'; } ?> " > คิวงานซ่อม  </a></td>
+  <td style="margin:1px;" width="12%" > </td>
   <td style="margin:1px;" > 
     <div style="text-align:right; width: 80%;
     float: right; margin-right:18px;">
@@ -84,19 +99,24 @@ style="position: absolute; z-index: 1110;"
     </div>  </td>
     </tr>
 </table>
+  <?php  
+//initial setting area
+//Switch your component here
+	if(!isset($_GET['c'])){ $c=1; }else{ $c=$_GET['c']; }
+	
+	if ($c ==1){
+			//Start component 1
+				include('../../include/model-teadmin/components/page/component_workorder.php');
+	}else if ($c==2){
+		//Start component 2
+		include('../../include/model-teadmin/components/page/component_workorder_q.php');
+	}else if ($c==3){
+		//Start component 3
+	}else if ($c==4){
+		//Start component 4
+	}
 
-<!-- Sub menu -->
- 
-<!--//End sub menu -->
-
- <?php
-   if($mn==1){
-  include("component_workorder.php");
-  }else{
-  include("component_workorder_q.php");
-  }
- 
-  ?>
+?>
 
 <!-- End data-role content -->
 

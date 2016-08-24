@@ -1,6 +1,14 @@
- 
+<?php
+    /******************** MIS STANDARD HEADER ***********************	
+File Name        : component_machine.php
+    Project No   : 
+    Create Date  : 05/08/2016
+	Create by     : Tinnakorn.M
+	Log:  DD/MM/YYYY : Description, By Name
+            05/08/2016 : Component Template : mtmachine, By Tinnakorn.M
+/****************************************************************/
+?>
 <style type="text/css">
- 
 #tlb td, #tlb td th {
 border: 1px solid #CCC;
 padding: 4px;
@@ -13,7 +21,6 @@ font-size:13px;
  
    <div style=" font-size:24px; padding-top:5px;">
        <strong>&raquo; กลุ่มเครื่องจักร  </strong>
-       
        <div style="text-align:right; float:right;">
      <table>
      <tr>
@@ -32,20 +39,8 @@ font-size:13px;
    
   <br/>
   กลุ่มเครื่องจักรหลัก <?php echo $dev_v1; ?>
-  
-  
-  
  <table  width="100%"  id="tlb" class="ui-body-d ui-shadow table-stripe">
- <!--
-  <tr>
-    <th colspan="6" style="text-align:center" scope="col">
-    <div style="text-align:center; padding:5px; background-color:#D3E5F7;">
-      <strong> </strong> 
-      
-      Filter</div>
-    </th>
-    </tr>
-  -->  
+
   <tr style="height:40px; vertical-align:middle; text-align:center; font-weight:bold; background-color:#CFCFCF;">
     <th width="4%" >No.</th>
     <th width="5%">รูปภาพ</th>
@@ -88,7 +83,7 @@ font-size:13px;
  
 	    $q2 = mysql_query("SELECT * FROM  `tpm_item` WHERE  `main_id` =".$arrg['item_id']." LIMIT 0 , 30");
 		while($arrm = mysql_fetch_array($q2)){
-			echo '<div><a href="?f=0&mn='.$mn.'&gr='.$arrm['item_id'].'" data-ajax="false"> &raquo; '.$arrm['item_name'].'</a></div>';
+			echo '<div><a href="?m='.$modulename.'&c=1&gr='.$arrm['item_id'].'" data-ajax="false"> &raquo; '.$arrm['item_name'].'</a></div>';
 		}
 	
 	?>
@@ -122,15 +117,13 @@ font-size:13px;
     <?php }//end if ?>
 
 </table>
-
-    
-    
+ 
       </div>
       
 <?php include("../../include/model-teadmin/components/page/subpast/popup_frm_new_mcgroup.php"); ?>      
       
  
-
+<!-- end component -->
   
   
     

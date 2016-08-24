@@ -30,7 +30,7 @@
    mysql_select_db($db,$connect); 
   $r=mysql_query($q1);
   $arrsp=mysql_fetch_array($r);
-  $mn=1;
+  $d=1;
   
    ?>
     <form action="http://lionproduction.sli/pdmis/include/model-teadmin/components/query/update_sparepart.php" method="post" enctype="multipart/form-data" data-ajax="false" class="frm-edit" >
@@ -70,7 +70,7 @@
         <td><!-- process -->
            <?php echo $arrsp['spr_type']; ?>
             
-           <input  type="hidden" name="mn" id="mn"  value="<?php if($arrsp['spr_type']=='SPECIAL' ) { echo '1'; }else{ echo '2'; } ?>" />
+           <input  type="hidden" name="c" id="c"  value="<?php if($arrsp['spr_type']=='SPECIAL' ) { echo '1'; }else{ echo '2'; } ?>" />
            
            
            <input name="spr_id" type="hidden" value="<?php echo $arrsp['spr_id']; ?>" />

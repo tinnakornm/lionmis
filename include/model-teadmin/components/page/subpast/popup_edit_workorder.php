@@ -31,7 +31,7 @@
  
   $r=mysql_query($q1);
   $arrj=mysql_fetch_array($r);
-  $mn=1;
+  $c=1;
   
    ?>
    <div style="padding:5px; margin:5px;">

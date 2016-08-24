@@ -21,7 +21,7 @@ $(document).ready(function()
 			success: function(html)
 			{    
 				 if(html==1){
-					 window.location.href = 'http://lionproduction.sli/pdmis/'+dev_root+'/teadmin/index.php?f=0&mn=1&gr='+main_id;
+					 window.location.href = 'http://lionproduction.sli/pdmis/'+dev_root+'/teadmin/index.php?m=mtmachine&c=1&gr='+main_id;
 				 }else{ 
 				 	 alert("ไม่สามารถลบ Sparepart นี้ได้ "+html);
 				 } 

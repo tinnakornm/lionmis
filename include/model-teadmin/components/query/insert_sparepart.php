@@ -93,7 +93,7 @@
 	}//end post newsprt
 	
  
- 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?f=1&mn=1&gr=$sprg_name'>";
+ 	echo"<meta http-equiv='refresh' content='0; url=http://lionproduction.sli/pdmis/".$_POST['dev_root']."/teadmin/?m=mtsparepart&c=1&gr=$sprg_name'>";
 
  ?>
  
